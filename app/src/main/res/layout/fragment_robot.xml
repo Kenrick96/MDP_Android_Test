@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/scifi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:weightSum="1"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:id="@+id/leftColumn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutSetup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/statusTextView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/statusTextView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"
+                    android:layout_gravity="center" />
+
+                <Button
+                    android:id="@+id/button_robot_position"
+                    android:layout_width="211dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="right"
+                    android:background="@drawable/type_1"
+                    android:text="Set Robot Position" />
+
+                <TextView
+                    android:id="@+id/statusTextView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center" />
+
+                <Button
+                    android:id="@+id/button_way_point"
+                    android:layout_width="212dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="right"
+                    android:background="@drawable/type_1"
+                    android:text="Set Waypoint" />
+
+                <TextView
+                    android:id="@+id/statusTextView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center" />
+
+                <Button
+                    android:id="@+id/button_send_coords"
+                    android:layout_width="212dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="right"
+                    android:background="@drawable/type_1"
+                    android:text="Send Coordinates" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayoutSetup"
+                android:paddingLeft="40dp"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/statusTextView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="234dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Robot head (x,y):" />
+
+                <TextView
+                    android:id="@+id/textview_robot_head"
+                    android:layout_width="234dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Undefined" />
+
+                <TextView
+                    android:layout_width="234dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Robot body (x,y):" />
+
+                <TextView
+                    android:text="Undefined"
+                    android:id="@+id/textview_robot_body"
+                    android:layout_width="234dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:text="Waypoint (x,y):"
+                    android:layout_width="234dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:text="Undefined"
+                    android:id="@+id/textview_waypoint"
+                    android:layout_width="232dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                </ScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:padding="8dp">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:backgroundTint="@color/colorAccent"
+                    app:srcCompat="@drawable/ic_refresh_icon"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:gravity="center"
+            android:layout_weight="0.4">
+
+            <GridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="15"
+                android:scrollbars="none" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rightColumn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_weight="0.3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="4dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/statusTextView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+                <TextView
+                    android:id="@+id/statusTextView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <Switch
+                    android:id="@+id/switchRotateBySensor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
+                    android:text="Rotate By Sensor"
+                    android:checked="false"
+                    android:visibility="gone" />
+
+                <Switch
+                    android:id="@+id/switchNavigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
+                    android:text="Auto Navigate"
+                    android:checked="true"
+                    android:visibility="gone" />
+
+                <Switch
+                    android:id="@+id/switchUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
+                    android:text="Auto Update"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutforL1L2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1.15"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/buttonL1"
+                    android:background="@drawable/button_ghost"
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="L1"
+                    android:layout_weight="0.5" />
+
+                <Button
+                    android:id="@+id/buttonL2"
+                    android:background="@drawable/button_ghost"
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="L2"
+                    android:layout_weight="0.5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutForDirectionalPad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="32dp"
+                android:paddingRight="50dp"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <com.andretietz.android.controller.DirectionView
+                    android:id="@+id/viewDirection"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutForAutoNavigate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginRight="40dp"
+                    android:orientation="vertical">
+
+                    <RadioButton android:id="@+id/radioExploration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="40dp"
+                        android:checked="true"
+                        android:text="Exploration" />
+
+                    <RadioButton android:id="@+id/radioFastestPath"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="40dp"
+                        android:layout_height="wrap_content"
+                        android:text="Fastest Path" />
+
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/buttonStart"
+                    android:background="@drawable/button_ghost"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:text="@string/start" />
+
+                <Button
+                    android:id="@+id/buttonStop"
+                    android:background="@drawable/button_ghost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/stop" />
+
+                <TextView
+                    android:id="@+id/statusTextView"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
